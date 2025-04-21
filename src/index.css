@@ -49,6 +49,14 @@
   .fade-in {
     animation: fadeIn 0.4s cubic-bezier(.53,.18,.42,1.12) both;
   }
+  
+  .glass-effect {
+    @apply bg-white bg-opacity-80 backdrop-blur-sm border border-white border-opacity-20;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  }
 }
 
 @keyframes fadeIn {
@@ -61,4 +69,3 @@
     font-size: 16px;
   }
 }
-

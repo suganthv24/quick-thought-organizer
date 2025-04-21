@@ -28,13 +28,19 @@ export default {
           blue: "#D3E4FD",
           green: "#F2FCE2",
           purple: "#E5DEFF",
+          peach: "#FDE1D3",
+          yellow: "#FEF7CD",
+          pink: "#FFDEE2",
         },
         card: "#fff",
       },
       borderRadius: {
         lg: '1.25rem',
         md: '1rem',
-        sm: '0.5rem'
+        sm: '0.5rem',
+        xl: '1.5rem',
+        '2xl': '2rem',
+        '3xl': '2.5rem',
       },
       boxShadow: {
         pleasant: '0 6px 24px -2px rgba(44,62,80,0.07), 0 1.5px 12px 0 rgba(110,120,132,0.02);',
@@ -52,4 +58,3 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
