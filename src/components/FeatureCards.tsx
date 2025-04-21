@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, BookOpen, FileExport } from "lucide-react";
+import { FileText, BookOpen, FileUp } from "lucide-react";
 
 const features = [
   {
@@ -18,7 +18,7 @@ const features = [
   {
     title: "Export to Word, PPT, or PDF",
     description: "Convert your notes to professional documents, presentations, or PDFs with a single click.",
-    icon: FileExport,
+    icon: FileUp,
     color: "bg-accent-green",
   },
 ];
