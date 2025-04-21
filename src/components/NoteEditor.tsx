@@ -10,7 +10,7 @@ interface NoteEditorProps {
   note?: Note;
   isOpen: boolean;
   onClose: () => void;
-  onSave: (note: Note) => void;
+  onSave?: (note: Note) => void;
 }
 
 const NoteEditor = ({ note, isOpen, onClose, onSave }: NoteEditorProps) => {
@@ -40,7 +40,9 @@ const NoteEditor = ({ note, isOpen, onClose, onSave }: NoteEditorProps) => {
       updatedAt: now,
     };
     
-    onSave(updatedNote);
+    if (onSave) {
+      onSave(updatedNote);
+    }
     onClose();
   };
 

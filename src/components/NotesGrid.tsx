@@ -59,14 +59,6 @@ const NotesGrid = () => {
 
   return (
     <div className="container mx-auto p-4 max-w-6xl">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">QuickNotes</h1>
-        <Button onClick={handleCreateNote}>
-          <Plus className="h-4 w-4 mr-2" />
-          New Note
-        </Button>
-      </div>
-
       <div className="relative mb-6">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
