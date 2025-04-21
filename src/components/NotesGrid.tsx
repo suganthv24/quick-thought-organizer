@@ -66,7 +66,7 @@ const NotesGrid = () => {
           placeholder="Search notes..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="pl-10 pr-10"
+          className="pl-10 pr-10 rounded-xl text-base bg-white bg-opacity-90 border border-gray-200 focus:border-blue-300 transition-colors"
         />
         {searchQuery && (
           <Button
@@ -74,6 +74,7 @@ const NotesGrid = () => {
             size="icon"
             className="absolute right-1 top-1/2 transform -translate-y-1/2 h-8 w-8"
             onClick={handleClearSearch}
+            aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </Button>
@@ -82,7 +83,7 @@ const NotesGrid = () => {
 
       {notes.length === 0 ? (
         <div className="text-center py-12">
-          <p className="text-gray-500 mb-4">
+          <p className="text-gray-500 mb-4 text-lg">
             {searchQuery ? "No notes match your search" : "You don't have any notes yet"}
           </p>
           {!searchQuery && (
@@ -93,7 +94,7 @@ const NotesGrid = () => {
           )}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {notes.map((note) => (
             <NoteCard
               key={note.id}
